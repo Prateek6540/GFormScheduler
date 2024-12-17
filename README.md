@@ -128,11 +128,6 @@ GFormScheduler/
 ```
 ---
 
-## Screenshots
-
-### 1. Google Sheet Sharing
-![Google Sheet Sharing](static/images/steo1.png "Step 1: Share Google Sheet")
-
 
 ## Future Enhancements
 - Add support for multiple recipients.
