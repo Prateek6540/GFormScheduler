@@ -39,7 +39,7 @@ git clone <repository-url>
 cd GFormScheduler
 ```
 ---
-##3. Install Dependencies
+## 3. Install Dependencies
 Create a virtual environment and install the required libraries:
 
 ```bash
@@ -49,7 +49,7 @@ source venv/bin/activate   # On Windows use: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 ---
-##4. Configure Environment Variables
+## 4. Configure Environment Variables
 Create a .env file in the project root directory with the following variables:
 ```bash
 SENDER_EMAIL=your_email@example.com         # Your SMTP sender email  
@@ -59,7 +59,7 @@ SECRET_KEY=your_flask_secret_key            # Flask secret key
 ```
 ---
 
-##5. Generate a Secret Key
+## 5. Generate a Secret Key
 To generate a Flask SECRET_KEY securely, create a Python file named secret.py with the following content:
 
 ```bash
@@ -74,14 +74,14 @@ Copy the generated key and paste it into your .env file as the value for SECRET_
 ```
 ---
 
-##6. Set Up Google Service Account
-- **Go to the Google Cloud Console.
-- **Enable the Google Sheets API.
-- **Create a Service Account and download the credentials JSON file.
-- **Rename the file to SECRET_KEY.json and place it in the project root directory.
-- **Share your Google Sheet with the service account email provided in the credentials file.
+## 6. Set Up Google Service Account
+- Go to the Google Cloud Console.
+- Enable the Google Sheets API.
+- Create a Service Account and download the credentials JSON file.
+- Rename the file to SECRET_KEY.json and place it in the project root directory.
+- Share your Google Sheet with the service account email provided in the credentials file.
 ---
-##7. Run the Application
+## 7. Run the Application
 Start the Flask server:
 
 ```bash
@@ -91,7 +91,7 @@ Access the app in your browser at http://127.0.0.1:5000.
 
 ---
 
-##How It Works
+## How It Works
 - **Create a Google Form: Link the responses to a Google Sheet.
 - **Share the Google Sheet: Share the spreadsheet with the service account email provided in the app.
 - **Schedule Email Delivery:
@@ -101,7 +101,7 @@ Access the app in your browser at http://127.0.0.1:5000.
 - **Set the schedule for delivery.
 - **Receive Files: The scheduled email will include the selected files as attachments.
 ---
-##Project Structure
+## Project Structure
 ```bash
 GFormScheduler/  
 │  
@@ -127,7 +127,7 @@ GFormScheduler/
 ```
 ---
 
-##Future Enhancements
+## Future Enhancements
 - **Add support for multiple recipients.
 - **Integrate with cloud storage (Google Drive) for generated files.
 - **Add user authentication for better security.
@@ -136,9 +136,9 @@ GFormScheduler/
 License
 This project is licensed under the MIT License.
 
-##Contributing
+## Contributing
 Feel free to fork the repository and submit pull requests for improvements.
 
-##Contact
+## Contact
 For any issues or queries, reach out via:
 📧 prateeknaik38@gmail.com
