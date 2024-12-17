@@ -37,53 +37,60 @@ GFormScheduler is a web-based tool that allows users to schedule emails containi
 ```bash
 git clone <repository-url>
 cd GFormScheduler
-
-3. Install Dependencies
+```
+---
+###3. Install Dependencies
 Create a virtual environment and install the required libraries:
 
-bash
-Copy code
+```bash
+
 python -m venv venv  
 source venv/bin/activate   # On Windows use: venv\Scripts\activate  
-pip install -r requirements.txt  
-4. Configure Environment Variables
+pip install -r requirements.txt
+```
+---
+###4. Configure Environment Variables
 Create a .env file in the project root directory with the following variables:
-
-plaintext
-Copy code
+```bash
 SENDER_EMAIL=your_email@example.com         # Your SMTP sender email  
 SENDER_PASSWORD=your_email_app_password     # App-specific email password  
 SERVICE_ACCOUNT_FILE=SECRET_KEY.json        # Google Service Account JSON file  
-SECRET_KEY=your_flask_secret_key            # Flask secret key  
-5. Generate a Secret Key
+SECRET_KEY=your_flask_secret_key            # Flask secret key
+```
+---
+
+###5. Generate a Secret Key
 To generate a Flask SECRET_KEY securely, create a Python file named secret.py with the following content:
 
-python
-Copy code
+```bash
 import secrets  
 print(secrets.token_hex(16))  
 Run the file:
+```
+```bash
 
-bash
-Copy code
 python secret.py  
 Copy the generated key and paste it into your .env file as the value for SECRET_KEY.
+```
+---
 
-6. Set Up Google Service Account
+###6. Set Up Google Service Account
 Go to the Google Cloud Console.
 Enable the Google Sheets API.
 Create a Service Account and download the credentials JSON file.
 Rename the file to SECRET_KEY.json and place it in the project root directory.
 Share your Google Sheet with the service account email provided in the credentials file.
-7. Run the Application
+###7. Run the Application
 Start the Flask server:
 
-bash
-Copy code
-python app.py  
+```bash
+python app.py
+```  
 Access the app in your browser at http://127.0.0.1:5000.
 
-How It Works
+---
+
+###How It Works
 Create a Google Form: Link the responses to a Google Sheet.
 Share the Google Sheet: Share the spreadsheet with the service account email provided in the app.
 Schedule Email Delivery:
@@ -92,9 +99,9 @@ Specify the recipient email.
 Choose file formats (CSV, PDF).
 Set the schedule for delivery.
 Receive Files: The scheduled email will include the selected files as attachments.
-Project Structure
-plaintext
-Copy code
+---
+###Project Structure
+```bash
 GFormScheduler/  
 │  
 ├── static/                     # CSS, JS, Images  
@@ -114,22 +121,23 @@ GFormScheduler/
 ├── SECRET_KEY.json             # Google Service Account Credentials  
 ├── .env                        # Environment variables  
 ├── secret.py                   # Generate Flask Secret Key  
-└── requirements.txt            # Python dependencies  
-Screenshots
-1. Share Google Sheet
+└── requirements.txt            # Python dependencies
 
-2. Schedule Email
+```
+---
 
-Future Enhancements
+###Future Enhancements
 Add support for multiple recipients.
 Integrate with cloud storage (Google Drive) for generated files.
 Add user authentication for better security.
+
+
 License
 This project is licensed under the MIT License.
 
-Contributing
+###Contributing
 Feel free to fork the repository and submit pull requests for improvements.
 
-Contact
+###Contact
 For any issues or queries, reach out via:
 📧 your-email@example.com
