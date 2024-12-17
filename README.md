@@ -92,14 +92,14 @@ Access the app in your browser at http://127.0.0.1:5000.
 ---
 
 ## How It Works
-- **Create a Google Form: Link the responses to a Google Sheet.
-- **Share the Google Sheet: Share the spreadsheet with the service account email provided in the app.
-- **Schedule Email Delivery:
-- **Input the Google Sheet URL.
-- **Specify the recipient email.
-- **Choose file formats (CSV, PDF).
-- **Set the schedule for delivery.
-- **Receive Files: The scheduled email will include the selected files as attachments.
+- Create a Google Form: Link the responses to a Google Sheet.
+- Share the Google Sheet: Share the spreadsheet with the service account email provided in the app.
+- Schedule Email Delivery:
+- Input the Google Sheet URL.
+- Specify the recipient email.
+- Choose file formats (CSV, PDF).
+- Set the schedule for delivery.
+- Receive Files: The scheduled email will include the selected files as attachments.
 ---
 ## Project Structure
 ```bash
@@ -115,7 +115,8 @@ GFormScheduler/
 │       └── step3.png  
 │  
 ├── templates/                  # HTML Templates  
-│   └── index.html  
+│   └── index.html
+|   └── success.html  
 │  
 ├── main.py                     # Helper functions (send_email, generate_csv, etc.)  
 ├── app.py                      # Flask application  
@@ -128,9 +129,9 @@ GFormScheduler/
 ---
 
 ## Future Enhancements
-- **Add support for multiple recipients.
-- **Integrate with cloud storage (Google Drive) for generated files.
-- **Add user authentication for better security.
+- Add support for multiple recipients.
+- Integrate with cloud storage (Google Drive) for generated files.
+- Add user authentication for better security.
 
 
 License
