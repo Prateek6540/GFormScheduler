@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Success</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="submit-container">
+        <h1>Schedule Created Successfully!</h1>
+        <p><strong>Google Sheet URL:</strong> <a href="{{ sheet_url }}" target="_blank">{{ sheet_url }}</a></p>
+        <p><strong>Recipient Email:</strong> {{ receiver_email }}</p>
+        <p><strong>Scheduled Time:</strong> {{ schedule_time.strftime('%Y-%m-%d %H:%M') }}</p>
+        <p><strong>Included Formats:</strong> {{ ", ".join(formats) if formats else "None" }}</p>
+    </div>
+</body>
+</html>
